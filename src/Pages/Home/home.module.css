@@ -1,0 +1,14 @@
+.custom-placeholder::placeholder {
+  color: red !important; /* Change to any color */
+  opacity: 1; /* Ensure full visibility */
+  background-color: #6051b6;
+}
+
+button {
+  background-color: rgb(76, 111, 188) !important;
+  /* outline: 2px solid rgb(45, 63, 104); */
+}
+
+custom-width {
+  width: 300px;
+}

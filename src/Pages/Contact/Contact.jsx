@@ -4,14 +4,14 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -22,49 +22,76 @@ const ContactForm = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', maxWidth: '300px', margin: 'auto' }}>
-      <h2>CONTACT</h2>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="name">Name</label><br />
+    <div
+      style={{
+        fontFamily: 'Arial, sans-serif',
+      }}
+      className=' d-flex flex-column justify-content-center align-items-center'
+    >
+      <h2 className='text-center fs-3 fw-bold'>CONTACT</h2>
+      <form onSubmit={handleSubmit} style={{ width: '400px' }}>
+        <div>
+          <br />
           <input
-            type="text"
-            id="name"
-            name="name"
+            type='text'
+            id='name'
+            name='name'
+            placeholder='Name'
             value={formData.name}
             onChange={handleChange}
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', height: '30px' }}
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', height: '45px' }}
+            className='border border-3 rounded-3 border-dark text-center text-dark'
           />
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="email">Email</label><br />
+        <div>
+          <br />
           <input
-            type="email"
-            id="email"
-            name="email"
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Email'
             value={formData.email}
             onChange={handleChange}
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', height: '30px' }}
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', height: '45px' }}
+            className='border border-3 rounded-3 border-dark text-center text-dark'
           />
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="message">Message</label><br />
+        <div>
+          <br />
           <textarea
-            id="message"
-            name="message"
+            id='message'
+            name='message'
             value={formData.message}
             onChange={handleChange}
-            placeholder="Type your message here..."
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', height: '100px' ,resize: 'none'}}
+            placeholder='Message'
+            style={{
+              width: '100%',
+              padding: '8px',
+              boxSizing: 'border-box',
+              height: '170px',
+              resize: 'none',
+            }}
+            className='border border-3 rounded-5 border-dark text-center text-dark'
           />
         </div>
-        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007BFF', color: 'white', border: 'none', width: '100%' }}>
-          Submit
-        </button>
+        <div className='text-center'>
+          <button
+            type='submit'
+            style={{
+              backgroundColor: '#007BFF',
+            }}
+            className='btn border border-2 border-secondary text-white px-4 py-1 fs-5 my-2'
+          >
+            Submit
+          </button>
+        </div>
       </form>
-      <div style={{ marginTop: '20px', textAlign: 'center' }}>
-        <p>2232, GLADIAN ST, FL345, MIAMI, USA</p>
-        <p>Tel: +33 45 45 45 45</p>
+      <div
+        style={{ textAlign: 'center', width: '500px' }}
+        className='border-top border-2 border-secondary-subtle pt-3 '
+      >
+        <p style={{ fontSize: '12px', lineHeight: '1' }}>2232, GLADIAN ST, FL345, MIAMI, USA</p>
+        <p style={{ fontSize: '12px', lineHeight: '1' }}>Tel: +33 45 45 45 45</p>
       </div>
     </div>
   );

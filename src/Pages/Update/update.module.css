@@ -1,0 +1,11 @@
+.updatesScrollContainer {
+  max-height: 450px; /* Adjust height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-right: 10px; /* Prevents content from touching scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+.updatesScrollContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}

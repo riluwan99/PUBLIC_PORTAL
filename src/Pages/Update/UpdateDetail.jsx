@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const UpdateDetail = () => {
-  return (
-    <div>UpdateDetail</div>
-  )
-}
+  return <div>UpdateDetail</div>;
+};
 
-export default UpdateDetail
+export default UpdateDetail;
